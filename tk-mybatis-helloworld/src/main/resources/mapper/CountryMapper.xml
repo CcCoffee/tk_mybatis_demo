@@ -1,0 +1,7 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zhengkehui.mybatis.helloworld.mapper.CountryMapper">
+    <select id="selectByCountryName" resultType="com.zhengkehui.mybatis.helloworld.bean.Country">
+        select * from country where countryname = #{countryname}
+    </select>
+</mapper>

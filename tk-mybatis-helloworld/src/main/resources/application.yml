@@ -1,0 +1,19 @@
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+  notEmpty: true
+  safe-delete: true # 只有指定了条件之后才能删除，否则报错
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tk_mysql
+    username: root
+    password: 1234
+    type: com.alibaba.druid.pool.DruidDataSource # 使用druid数据源
+  profiles:
+    active: @profileActive@
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  # 如果采用xml文件方式写sql，必须指定位置
+
